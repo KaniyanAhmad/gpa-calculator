@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <script src="./script.js"></script>
+    <title>GPA Calculator</title>
+</head>
+<body>
+    <div><h1>GPA Calculator</h1></div>
+
+    <div class="mainContent">
+        <div id="courses-container-wrap">
+            <div id="courses-container">
+                <!-- Courses Additon -->
+                <div class="course-ref">
+                    <p>Rm</p>
+                    <p>Course</p>
+                    <p>Grade</p>
+                    <p>Cr. Hr</p>
+                </div>
+                
+                <div class="new-course">
+                    <img src="./close.png" alt="del" class="rm-course">
+                    <input type="text">
+                    <select name="grade" id="grade">
+                        <option value="A">A</option>
+                        <option value="A-">A-</option>
+                        <option value="B+">B+</option>
+                        <option value="B">B</option>
+                        <option value="C+">C+</option>
+                        <option value="C">C</option>
+                        <option value="D+">D+</option>
+                        <option value="D">D</option>
+                        <option value="F">F</option>
+                    </select>
+                    <input type="number" min="0" max="10">
+                </div>
+
+                <div class="new-course">
+                    <img src="./close.png" alt="del" class="rm-course">
+                    <input type="text">
+                    <select name="grade" id="grade">
+                        <option value="A">A</option>
+                        <option value="A-">A-</option>
+                        <option value="B+">B+</option>
+                        <option value="B">B</option>
+                        <option value="C+">C+</option>
+                        <option value="C">C</option>
+                        <option value="D+">D+</option>
+                        <option value="D">D</option>
+                        <option value="F">F</option>
+                    </select>
+                    <input type="number" min="0" max="10">
+                </div>
+            </div>
+
+            <div>
+                <button id="add-course-btn">Add More</button>
+            </div>
+        </div>
+
+        <div>
+            <div id="cgpa-container">
+                <!-- Calculated GPA -->
+                <p>CGPA</p>
+                <div id="cgpa">
+                    3.5
+                </div>
+            </div>
+
+            <button>Calculate</button>
+        </div>
+    </div>
+</body>
+</html>
