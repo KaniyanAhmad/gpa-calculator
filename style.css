@@ -11,22 +11,50 @@ body {
     justify-content: center;
     gap: 100px;
     margin: 100px;
+
+    background-image: url('./backgroung-img.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-color: cornflowerblue;
+}
+
+body > div:first-child > h1 {
+    color: white;
+    font-size: 50px;
 }
 
 .mainContent {
+    position: relative;
     display: flex;
     gap: 500px;
     justify-content: center;
     align-items: center;
-
-
-    border: 1px solid black;
-
+    border: none;
+    border-radius: 100px;
     padding: 150px;
     margin-top: auto;
     margin-bottom: auto;
     width: 1500px;
     height: 500px;
+
+    
+
+    background: rgba(255, 255, 255, 0.5);
+    -webkit-backdrop-filter: blur(50px);
+    backdrop-filter: blur(10px);
+}
+
+.mainContent::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: inherit; /* Inherit parent's background color */
+    z-index: -1; /* Place it behind the main content */
+    border-radius: 100px;
 }
 
 .rm-course {
@@ -86,6 +114,8 @@ body {
     width: 200px;
     border-radius: 10px;
     height: 30px;
+    background-color: transparent;
+    font-weight: bold;
 }
 
 .input-cr {
@@ -94,6 +124,9 @@ body {
     border-radius: 10px;
     font-size: 20px;
     text-align: center;
+    background-color: transparent;
+    font-weight: bold;
+    border: 1px dashed black;
 }
 
 .grade {
@@ -122,17 +155,33 @@ input::-webkit-inner-spin-button {
     width: 400px;
     height: 400px;
     
-    border: 1px solid black;
+    border: none;
+    border-radius: 10px;
 
     display: flex;
     gap: 50px;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+}
 
+#cgpa-container {
+    text-align: center;
+}
+
+#cgpa-container > p {
+    margin: 20px;
+    font-size: 20px;
+    color: rgb(68, 71, 71);
+}
+
+#cgpa {
+    font-size: 50px;
+    color: black;
 }
 
 #calculate-btn {
+    
     width: 150px;
     height: 50px;
     border-radius: 10px;
